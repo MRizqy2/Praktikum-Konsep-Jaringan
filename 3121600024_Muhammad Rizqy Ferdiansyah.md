@@ -1,9 +1,9 @@
 # LAPORAN PRAKTIKUM KONSEP JARINGAN
-##  Muhammad Rizqy Ferdiansyah (3121600024)
-## 2 D4 IT-A 
+Muhammad Rizqy Ferdiansyah (3121600024)
+2 D4 IT-A 
 
 
-1 DASAR TEORI
+# 1 DASAR TEORI
 Kabel UTP merupakan salah satu media transmisi yang paling banyak
 digunakan untuk membuat sebuah jaringan local (Local Area Network), selain karena
 harganya relative murah, mudah dipasang dan cukup bisa diandalkan. Sesuai
@@ -44,7 +44,7 @@ Susunan Kabel Crossover
 Untuk membuat jenis kabel crossover, maka Anda juga harus memperhatikan urutan warna yang berbeda antara ujung kabel pertama dengan ujung kabel kedua. Perhatikanlah gambar dibawah ini untuk lebih memahami urutan kabel crossover. 
 ![Kabel Cross Over](https://www.nesabamedia.com/wp-content/uploads/2018/06/Susunan-Kabel-Cross-Final.jpg)
 
-2 PEMBUATAN KABEL UTP
+# 2 PEMBUATAN KABEL UTP
 
 A. Membuat Kabel Straight UTP
 1. Kupas bagian ujung kabel UTP, kira-kira 2 cm.
@@ -164,7 +164,7 @@ Ujung B (Konektor 2)
 - Coklat Putih pada Pin 
 - Coklat pada Pin 
 
-3 PENGETESAN KABEL UTP
+# 3 PENGETESAN KABEL UTP
 Langkah untuk mengecek kabel yang sudah kita buat tadi yaitu dengan menggunakan LAN tester, caranya masukan masing-masing ujung kabel (konektor RJ-45) ke masing2 port yang tersedia pada LAN tester, nyalakan dan pastikan semua lampu LED menyala sesuai dengan urutan kabel yang kita buat.
 ![LAN Tester](https://www.ceristekno.com/wp-content/uploads/2013/10/lan-taster-1.jpg)
 
