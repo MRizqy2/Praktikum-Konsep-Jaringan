@@ -1,6 +1,5 @@
 # LAPORAN PRAKTIKUM KONSEP JARINGAN
-Muhammad Rizqy Ferdiansyah (3121600024)
-
+Muhammad Rizqy Ferdiansyah (3121600024) 
 2 D4 IT-A 
 
 
