@@ -1,226 +1,186 @@
-# LAPORAN PRAKTIKUM KONSEP JARINGAN
-Muhammad Rizqy Ferdiansyah (3121600024) 
+# PRAKTIKUM 2 KONSEP JARINGAN 
+Muhammad Rizqy Ferdiansyah (3121600024)
 
-2 D4 IT-A 
+2-D4 IT A
 
-# 1. DASAR TEORI
-Kabel UTP merupakan salah satu media transmisi yang paling banyak
-digunakan untuk membuat sebuah jaringan local (Local Area Network), selain karena
-harganya relative murah, mudah dipasang dan cukup bisa diandalkan. Sesuai
-namanya Unshielded Twisted Pair berarti kabel pasangan berpilin/terbelit (twisted
-pair) tanpa pelindung (unshielded)
+## SOAL 1 
+JELASKAN WARNA-WARNA (COLOR RULES) PADA WIRESHARK
+![ss-Wireshark.png](https://i.postimg.cc/nrN3h7JV/ss-Wireshark.png)
 
-1.1 MEDIA JARINGAN KOMPUTER
+Diatas ini adalah contoh tampilan dari wireshark saat terhubung ke wifi.
 
-Coaxial Cable
+Coloring Rules Default :
 
-- Copper (tembaga) dipilih sebagai media karena tembaga merupakan salah satu konduktor yang baik dalam menghantarkan elektron. Coaxial kable harganya lebih murah dan teknologinya juga tidak asing lagi. Coaxial kable sudah digunakan selama puluhan tahun untuk berbagai jenis komunikasi data dan biasanya digunakan untuk kabel antena TV.
+![color rules](https://i.postimg.cc/g0kJkGTw/color-rules-wireshark.png)
 
-Twisted Pair Cable
 
-- STP (Shield Twisted Pair)
-Media ini banyak dipakai untuk kondisi khusus. Misalnya pada kapal laut, pengeboran lepas pantai. Sehingga instansi-instansi khusus saja yang membutuhkan media ini sebagai media transmisi. Kabel STP ini pemasanganya lebih rumit dari pada UTP dan relative lebih mahal. Kabel STP mempunyai hambatan 150 ohm.
+|**Warna**|**Jenis Paket**|
+| :-: | :-: |
+|**Hitam**|Paket dengan kesalahan (error)|
+|**Kuning Muda**|Lalu lintas khusus Windows, termasuk Server Message Blocks (SMB) dan NetBIOS|
+|**Ungu Muda**|TCP|
+|**Hijau Muda**|Trafic HTTP|
+|**Kuning Gelap**|Rute|
+|**Abu-abu Gelap**|TCP SYN, FIN dan ACK lalu lintas|
+|**Biru Muda**|UDP|
 
-- UTP (Unshield Twisted Pair)
-Kabel Unshielded twisted-pair (UTP) adalah empat pasangan kawat yang digunakan dalam berbagai jaringan. Masing-masing dari 8 kawat tembaga dalam kabel UTP ditutup oleh bahan insulator dan masing-masing kawat dipilin (twisted) satu sama lain. Disebut Unshielded karena kurang tahan terhadap interferensi elektromagnetik. Dan disebut twisted pair karena di dalamnya terdapat pasangan kabel yang disusun spiral atau saling berlilitan.
+## BAGAIMANA MAKSUD DARI WARNA WARNA DIATAS?
 
-1.2 STANDAR KABEL UTP
-Pada umumnya, terdapat Standar Internasional yang digunakan dalam urutan warna kabel UTP adalah TIA/EIA 568A dan TIA/EIA 568B.
+**Bad TCP**
 
-![STANDAR URUTAN KABEL](https://www.nesabamedia.com/wp-content/uploads/2018/06/standar-kabel.jpg)
+- TCP atau Transmission Control Protocol adalah merupakan bagian inti penting dari Internet Protocol sehingga sering disebut TCP/IP. TCP menyediakan komunikasi yang dapat diandalkan dan mempunyai urutan yang rapi. TCP berada pada transport layer.
 
-Dengan begitu, kabel straight adalah teknik penyusunan warna kabel dengan menggunakan urutan warna yang sama di kedua ujung kabel UTP tersebut. Jika Anda menggunakan susunan standar TIA/EIA 568A di ujung pertama maka ujung kedua juga menggunakan standar TIA/EIA 568A itu juga. Begitu juga ketika Anda menggunakan standar TIA/EIA 568B (yang paling umum digunakan) maka ujung kabel kedua juga harus menggunakan susunan standar yang sama pula.
+**HSRP State Change**
 
-1.3 KONEKSI DENGAN KABEL UTP
+- Hot Standby Router Protocol (HSRP) adalah sebuah protokol standar CISCO yang menetapkan sebuah router yang secara otomatis mengambil alih jika router yang lain gagal. Dalam HSRP disetting dua status router yaitu aktif dan standby. Router standby baru digunakan jika router aktifnya gagal.
 
-Susunan Kabel Straight
-- Jika Anda hendak membuat jenis kabel straight, maka hal pertama yang harus diperhatikan adalah susunan warna dari ujung kabel yang satu dengan yang lainnya harus menggunakan urutan warna yang sama. Perhatikanlah gambar dibawah ini.
+**Spanning Tree Topology Change**
 
-![Kabel Straight](https://www.nesabamedia.com/wp-content/uploads/2018/06/Susunan-Kabel-Straight-Final.jpg "Contoh Susunan kabel straight")
+- protokol jaringan yang menjamin topologi jaringan bebas-perulangan bagi penghubung Ethernet LAN.
 
-Biasanya, untuk menghubungkan antar perangkat komputer menggunakan konektor RJ-45 sebagai penghubungnya. Dimana konektor RJ-45 tersebut terdapat 8 pin didalamnya. Dengan demikian, untuk membuat jenis kabel straight maka Anda harus memasukkan masing-masing lilitan kabel yang telah Anda susun ke dalam pin konektor RJ-45 sesuai dengan standar yang Anda inginkan.
+**OSPF State Change**
 
-Susunan Kabel Crossover
--  kabel crossover berarti teknik penyusunan warna kabel dengan menggunakan urutan yang berbeda antara ujung kabel pertama dengan kedua. Misalnya, jika Anda menggunakan standar TIA/EIA 568B di ujung pertama, maka ujung kedua menggunakan standar EIA/TIA 568A.
+- OSPF adalah protokol link state yang dianggap sebagai protokol paling terkenal di antara keluarga Interior Gateway Protocol (IGP), dikembangkan pada pertengahan 1980-an oleh kelompok kerja OSPF dari IETF. 
 
-Untuk membuat jenis kabel crossover, maka Anda juga harus memperhatikan urutan warna yang berbeda antara ujung kabel pertama dengan ujung kabel kedua. Perhatikanlah gambar dibawah ini untuk lebih memahami urutan kabel crossover. 
+**ICMP errors**
 
-![Kabel Cross Over](https://www.nesabamedia.com/wp-content/uploads/2018/06/Susunan-Kabel-Cross-Final.jpg)
+- ICMP adalah kependekan dari Internet Control Message Protocol. ICMP merupakan bagian dari Internet Protocol. ICMP digunakan peralatan-peralatan yg terhubung melalui jaringan internet untuk keperluan analisa jaringan. Penggunaan ICMP yang terkenal adalah ping dan traceroute.
 
-# 2. PEMBUATAN KABEL UTP
+**TCP RST**
 
-A. Membuat Kabel Straight UTP
-1. Kupas bagian ujung kabel UTP, kira-kira 2 cm.
-2. Buka pilinan kabel, luruskan dan urutankan kabel sesuai standar gambar.
-3. Setelah urutannya sesuai standar, potong dan ratakan ujung kabel,
-4. Masukan kabel yang sudah lurus dan sejajar tersebut ke dalam konektor RJ-45, dan
-5. pastikan semua kabel posisinya sudah benar dengan posisi sebagai berikut:
-- Orange Putih pada Pin 
-- Orange pada Pin 
-- Hijau Putih pada 
-- Biru pada Pin 
-- Biru Putih pada Pin 
-- Hijau pada Pin 
-- Coklat Putih pada Pin 
-- Coklat pada Pin 
+- RST adalah reset. 
 
-(NOTE: JIKA KABEL STRAIGHT, URUTAN WARNA UJUNG A DAN B NYA SAMA)
+- TCP atau Transmission Control Protocol adalah merupakan bagian inti penting dari Internet Protocol sehingga sering disebut TCP/IP. TCP menyediakan komunikasi yang dapat diandalkan dan mempunyai urutan yang rapi. TCP berada pada transport layer.
 
-![Kabel Straight](https://www.nesabamedia.com/wp-content/uploads/2018/06/Susunan-Kabel-Straight-Final.jpg "Contoh Susunan kabel straight")
+**SCTP ABORT**
 
+- SCTP adalah protokol message- oriented yang handal. SCTP menyimpan batas- batas pesan dan pada saat yang sama mendeteksi kehilangan data, duplikasi data, dan out-of-order data. SCTP juga memiliki kontrol kongesti dan mekanisme kontrol aliran.
 
-A. Membuat Kabel Cross UTP
-1. Kupas bagian ujung kabel UTP, kira-kira 2 cm.
-2. Buka pilinan kabel, luruskan dan urutankan kabel sesuai standar gambar.
-3. Setelah urutannya sesuai standar, potong dan ratakan ujung kabel,
-4. Masukan kabel yang sudah lurus dan sejajar tersebut ke dalam konektor RJ-45, dan
-5. pastikan semua kabel posisinya sudah benar dengan posisi sebagai berikut:
+**TTL low or unexpected**
 
-Ujung A (Konektor 1)
-- Orange Putih pada Pin 
-- Orange pada Pin 
-- Hijau Putih pada Pin 
-- Biru pada Pin 
-- Biru Putih pada Pin 
-- Hijau pada Pin 
-- Coklat Putih pada Pin 
-- Coklat pada Pin 
+- Time to Live (TTL) adalah mekanisme untuk membatasi umur data dalam komputer atau jaringan. TTL dapat di implementasikan sebagai counter atau timestamp terpasang atau tertanam dalam data.
 
-Ujung B (Konektor 2)
-- Hijau Putih pada Pin 
-- Hijau pada Pin 
-- Orange Putih pada Pin 
-- Biru pada Pin 
-- Biru Putih pada Pin 
-- Orange pada Pin 
-- Coklat Putih pada Pin 
-- Coklat pada Pin 
+**Checksum Errors**
 
-![Kabel Cross Over](https://www.nesabamedia.com/wp-content/uploads/2018/06/Susunan-Kabel-Cross-Final.jpg)
+- Checksum Internet,[1][2] juga disebut checksum header IPv4 adalah checksum yang digunakan dalam versi 4 dari Internet Protocol (IPv4) untuk mendeteksi kerusakan pada header paket IPv4. Itu dibawa dalam header paket IP, dan mewakili hasil 16-bit dari penjumlahan kata-kata header.[3]
 
-2.1 ALAT YANG DIPERSIAPKAN & KEGUNAANNYA
+- Protokol IPv6 tidak menggunakan checksum header. Perancangnya menganggap bahwa checksumming lapisan link seluruh paket yang disediakan dalam protokol, seperti PPP dan Ethernet, dikombinasikan dengan penggunaan checksum di protokol lapisan atas seperti TCP dan UDP, sudah cukup.[4] Dengan demikian, router IPv6 dibebaskan dari tugas menghitung ulang checksum setiap kali paket berubah, misalnya dengan menurunkan penghitung batas Hop pada setiap hop.
 
-1. Kabel UTP
+- Checksum Internet wajib untuk mendeteksi kesalahan dalam paket UDP IPV6 (termasuk muatan data).
 
-![Kabel UTP](https://i0.wp.com/4.bp.blogspot.com/-xPLX3J8_U6w/WQXxNzP6S-I/AAAAAAAAAYY/Jnl7j0nEtWENnv3KxH4jeZcy6X4dAZHcwCLcB/s200/twisted-pair-cable-utp.jpg?resize=200%2C87&ssl=1)
+**SMB**
 
-- Kabel UTP paling umum digunakan pada LAN, dan merupakan salah satu perangkat keras komputer yang digunakan sebagai penghubung atau transmisi data pada sebuah jaringan. Fungsi kabel UTP dalam hal ini adalah untuk membatasi kecepatan akses internet komputer.
+- Blok pesan server (SMB) adalah jaringan file sharing dan protokol data Fabric. SMB digunakan oleh miliaran perangkat dalam sekumpulan sistem operasi yang beragam, termasuk Windows, MacOS, iOS, Linux, dan Android. Klien menggunakan SMB untuk mengakses data di server.
 
-2. Tang Crimp
+**HTTP**
 
-![Tang Crimp](https://i0.wp.com/2.bp.blogspot.com/-xJhYE02HsuY/WQXxKMv0PNI/AAAAAAAAAYU/ZYPE76zMbXsTbEGxSskaeodX-z1ILKECwCEw/s200/tang-crimper-or-crimping-tools-vz-nt3104-7.JPG?resize=200%2C200&ssl=1)
+- HTTP atau Hypertext Transfer Protocol  adalah protokol jaringan lapisan aplikasi (application layer) yang dikembangkan untuk membantu proses transfer antar komputer. Protokol ini berguna untuk mentransfer informasi seperti dokumen, file, gambar, dan video antar komputer.
 
-- Tang crimping dipakai untuk memotong, memipihkan, hingga mengupas lapisan isolator kabel.
+**DCERPC**
 
-3. Konektor RJ45
+- DCE/RPC, kependekan dari "Lingkungan Komputasi Terdistribusi / Panggilan Prosedur Jarak Jauh", adalah sistem panggilan prosedur jarak jauh yang dikembangkan untuk Lingkungan Komputasi Terdistribusi (DCE). Sistem ini memungkinkan pemrogram untuk menulis perangkat lunak terdistribusi seolah-olah semuanya bekerja pada komputer yang sama, tanpa harus khawatir tentang kode jaringan yang mendasarinya.
 
-![rj 45](https://i0.wp.com/2.bp.blogspot.com/-vEz-bbmP_74/WQXxqSu7MVI/AAAAAAAAAYo/PSyBd0DzD9YzR2CmQVEdYOpKU_d9-5hXACLcB/s200/2-Cara-Crimping-dan-Pasang-Konektor-RJ-45-pada-Kabel-UTP-LAN-model-Straight-serta-Cross-emerer.com-.jpg?resize=200%2C147&ssl=1)
+**Routing**
 
-- RJ45 adalah konektor kabel ethernet yang kebanyakan memiliki fungsi sebagai konektor pada topologi jaringan komputer LAN (Local Area Network) dan topologi jaringan lainnya. Konektor RJ45 memiliki 8 buah pin.
+- Pengertian umum dari perutean atau routing adalah suatu proses pada paket yang meneruskan jaringan dari satu jaringan ke jaringan lainnya melalui internet. Fungsi routing adalah menghubungkan segmen jaringan lain untuk mengirimkan paket data. Routing penting untuk dipahami karena berguna untuk mengetahui dasar-dasar pada sebuah jaringan.
 
-4. LAN Tester
+**TCP SYN/FIN**
 
-![LAN Tester](https://images.tokopedia.net/img/cache/500-square/VqbcmM/2020/9/28/8b94c97d-acb7-4136-9cea-99b6c5927776.jpg)
+- TCP SYN-FIN Packets— Paket SYN dikirim untuk membuat koneksi TCP baru. Paket TCP FIN dikirim untuk menutup koneksi. Paket di mana flag SYN dan FIN diset seharusnya tidak pernah ada. Oleh karena itu paket-paket ini mungkin menandakan serangan pada perangkat dan harus diblokir.
 
-- LAN tester adalah alat untuk mengecek koneksi sambungan kabel LAN RJ 45 dan RJ 11
-     
-2.2 LANGKAH PEMBUATAN KABEL TIPE STRAIGHT
+**TCP**
 
-A. Membuat Kabel Straight UTP
-1. Kupas bagian ujung kabel UTP, kira-kira 2 cm.
+- TCP atau Transmission Control Protocol adalah merupakan bagian inti penting dari Internet Protocol sehingga sering disebut TCP/IP. TCP menyediakan komunikasi yang dapat diandalkan dan mempunyai urutan yang rapi. TCP berada pada transport layer.
 
-![LAN Tester](https://camo.githubusercontent.com/f00fe8ce51d9fca4b510529bfa782171897349887558423d2edfbf784c8f7656/68747470733a2f2f692e706f7374696d672e63632f39465064725037342f494d4732303232303832333135333833352e6a7067)
+**UDP**
 
-2. Buka pilinan kabel, luruskan dan urutankan kabel sesuai standar gambar.
+- UDP adalah singkatan dari User Data Protocol yang merupakan salah satu jenis protokol internet yang memungkinkan sebuah perangkat lunak pada komputer bisa mengirimkan pesan ke komputer lain melalui jaringan tanpa perlu ada komunikasi awal. Jadi saat Anda mengirimkan pesan melalui UDP, komputer pengirim dan penerima tidak perlu bernegosiasi saat akan melakukan pertukaran data.
 
-![LAN Tester](https://camo.githubusercontent.com/d475922f3df0175a8c6a7a7c7c61d88685e276fdf4647ed39e72f9875cfe6afc/68747470733a2f2f692e706f7374696d672e63632f744a5136673752742f494d4732303232303832333135353134342e6a7067)
+**Broadcast**
 
-3. Setelah urutannya sesuai standar, potong dan ratakan ujung kabel,
+- Broadcast adalah sebuah metode dalam pengiriman data dimana data akan dikirim ke banyak titik sekaligus tanpa melakukan pengecekan apakah alamat yang dituju siap untuk menerima data atau tidak dan juga pengiriman paket juga tidak memperdulikan apakah data tersebut sampai pada alamat yang dituju atau tidak.
 
-![LAN Tester](https://camo.githubusercontent.com/f00fe8ce51d9fca4b510529bfa782171897349887558423d2edfbf784c8f7656/68747470733a2f2f692e706f7374696d672e63632f39465064725037342f494d4732303232303832333135333833352e6a7067)
+**System Event**
 
-4. Masukan kabel yang sudah lurus dan sejajar tersebut ke dalam konektor RJ-45, dan
-5. pastikan semua kabel posisinya sudah benar dengan posisi sebagai berikut:
+- System Event adalah titik dalam pelaksanaan program di mana tugas komputasi yang dapat diidentifikasi berlangsung. Contoh kejadian sistem meliputi: menulis ke file, memasukkan data ke dalam tabel database, memanggil subrutin, dan membuat instance thread program.
 
-![LAN Tester](https://camo.githubusercontent.com/9644d1c4acbcbb856c4b13d77198143d33e3ca61da2b98aa157458c4e8ff652b/68747470733a2f2f692e706f7374696d672e63632f4e305a394e4c58712f494d4732303232303832333135353435312e6a7067)
 
-- Orange Putih pada Pin 
-- Orange pada Pin 
-- Hijau Putih pada 
-- Biru pada Pin 
-- Biru Putih pada Pin 
-- Hijau pada Pin 
-- Coklat Putih pada Pin 
-- Coklat pada Pin 
+## SOAL2
+JELASKAN APA ITU IP HEADER PADA WIRE SHARK
 
-2.3 LANGKAH PEMBUATAN KABEL TIPE CROSSOVER
+1. Kita jalankan wireshark dan pilih wifi, ping dengan cmd dengan alamat gateway default pada ipconfig
 
-1. Kupas bagian ujung kabel UTP, kira-kira 2 cm.
+1. Pilih dan buka note yang ping
 
-![LAN Tester](https://camo.githubusercontent.com/f00fe8ce51d9fca4b510529bfa782171897349887558423d2edfbf784c8f7656/68747470733a2f2f692e706f7374696d672e63632f39465064725037342f494d4732303232303832333135333833352e6a7067)
+![Screenshot-4301.png](https://i.postimg.cc/fLJhk6Fw/Screenshot-4301.png)
 
-2. Buka pilinan kabel, luruskan dan urutankan kabel sesuai standar gambar.
+![Screenshot-4300.png](https://i.postimg.cc/ZKDpd3C4/Screenshot-4300.png)
 
-![LAN Tester](https://camo.githubusercontent.com/d475922f3df0175a8c6a7a7c7c61d88685e276fdf4647ed39e72f9875cfe6afc/68747470733a2f2f692e706f7374696d672e63632f744a5136673752742f494d4732303232303832333135353134342e6a7067)
+**TCP**
 
-3. Setelah urutannya sesuai standar, potong dan ratakan ujung kabel,
+![Screenshot-4302.png](https://i.postimg.cc/fTKtcdyJ/Screenshot-4302.png)
 
-![LAN Tester](https://camo.githubusercontent.com/f00fe8ce51d9fca4b510529bfa782171897349887558423d2edfbf784c8f7656/68747470733a2f2f692e706f7374696d672e63632f39465064725037342f494d4732303232303832333135333833352e6a7067)
+|**Nama field**|**Ukuran**|**Keterangan**|
+| :- | :- | :- |
+|**Source Port**|2 byte (16 bit)|Mengindikasikan sumber protokol lapisan aplikasi yang mengirimkan segmen TCP yang bersangkutan. Gabungan antara \_field\_ \*\*Source IP Address\*\* dalam \_header IP\_ dan \_field\_ \*\*Source Port\*\* dalam \_field\_ \_header TCP\_ disebut juga sebagai \*\*\_socket\_ sumber\*\*, yang berarti sebuah alamat global dari mana segmen dikirimkan. Lihat juga port TCP.|
+|**Destination Port**|2 byte (16 bit)|Mengindikasikan tujuan protokol lapisan aplikasi yang menerima segmen TCP yang bersangkutan. Gabungan antara field Destination IP Address dalam header IP dan field Destination Port dalam field header TCP disebut juga sebagai \*\*\_socket\_ tujuan\*\*, yang berarti sebuah alamat global ke mana segmen akan dikirimkan.|
+|**Sequence Number**|4 byte (32 bit)|Mengindikasikan nomor urut dari oktet pertama dari data di dalam sebuah segmen TCP yang hendak dikirimkan. Field ini harus selalu diset, meskipun tidak ada data (payload) dalam segmen. Ketika memulai sebuah sesi koneksi TCP, segmen dengan flag SYN (Synchronization) diset ke nilai 1, field ini akan berisi nilai Initial Sequence Number (ISN). Hal ini berarti, oktet pertama dalam aliran byte (byte stream) dalam koneksi adalah ISN+1.|
+|**Acknowledgment Number**|4 byte (32 bit)|Mengindikasikan nomor urut dari oktet selanjutnya dalam aliran byte yang diharapkan oleh untuk diterima oleh pengirim dari si penerima pada pengiriman selanjutnya. Acknowledgment number sangat dipentingkan bagi segmen-segmen TCP dengan flag ACK diset ke nilai 1.|
+|**Data Offset**|4 bit|Mengindikasikan di mana data dalam segmen TCP dimulai. Field ini juga dapat berarti ukuran dari header TCP. Seperti halnya field \*\*Header Length\*\* dalam header IP, field ini merupakan angka dari word 32-bit dalam header TCP. Untuk sebuah segmen TCP terkecil (di mana tidak ada opsi TCP tambahan), field ini diatur ke nilai 0x5, yang berarti data dalam segmen TCP dimulai dari oktet ke 20 dilihat dari permulaan segmen TCP. Jika field Data Offset diset ke nilai maksimumnya (24=16) yakni 15, header TCP dengan ukuran terbesar dapat memiliki panjang hingga 60 byte.|
+|**Reserved**|6 bit|Direservasikan untuk digunakan pada masa depan. Pengirim segmen TCP akan mengeset bit-bit ini ke dalam nilai 0.|
+|**Flags**|6 bit|Mengindikasikan flag-flag TCP yang memang ada enam jumlahnya, yang terdiri atas: URG (Urgent), ACK (Acknowledgment), PSH (Push), RST (Reset), SYN (Synchronize), dan FIN (Finish).|
+|**Window**|2 byte (16 bit)|Mengindikasikan jumlah byte yang tersedia yang dimiliki oleh buffer host penerima segmen yang bersangkutan. Buffer ini disebut sebagai Receive Buffer, digunakan untuk menyimpan byte stream yang datang. Dengan mengimbuhkan ukuran window ke setiap segmen, penerima segmen TCP memberitahukan kepada pengirim segmen berapa banyak data yang dapat dikirimkan dan disangga dengan sukses. Hal ini dilakukan agar si pengirim segmen tidak mengirimkan data lebih banyak dibandingkan ukuran Receive Buffer. Jika tidak ada tempat lagi di dalam Receive buffer, nilai dari field ini adalah 0\. Dengan nilai 0, maka si pengirim tidak akan dapat mengirimkan segmen lagi ke penerima hingga nilai field ini berubah (bukan 0). Tujuan hal ini adalah untuk mengatur lalu lintas data atau \_flow control\_.|
+|**Checksum**|2 byte (16 bit)|Mampu melakukan pengecekan integritas segmen TCP (\_header\_-nya dan \_payload\_-nya). Nilai field Checksum akan diatur ke nilai 0 selama proses kalkulasi checksum.|
+|**Urgent Pointer**|2 byte (16 bit)|Menandakan lokasi data yang dianggap “urgent” dalam segmen.|
+|**Options**|4 byte (32 bit)|Berfungsi sebagai penampung beberapa opsi tambahan TCP. Setiap opsi TCP akan memakan ruangan 32 bit, sehingga ukuran header TCP dapat diindikasikan dengan menggunakan field Data offset.|
+**ICMP**
 
-4. Masukan kabel yang sudah lurus dan sejajar tersebut ke dalam konektor RJ-45, dan
-5. pastikan semua kabel posisinya sudah benar dengan posisi sebagai berikut:
+![Screenshot-4304.png](https://i.postimg.cc/ncQc3Q3H/Screenshot-4304.png) **
 
-![LAN Tester](https://camo.githubusercontent.com/9644d1c4acbcbb856c4b13d77198143d33e3ca61da2b98aa157458c4e8ff652b/68747470733a2f2f692e706f7374696d672e63632f4e305a394e4c58712f494d4732303232303832333135353435312e6a7067)
+1. Version (4 bit). Menunjukkan format dari internet header. Versi saat ini sebagaimana dijelaskan pada RFC 791 adalah versi 4.
+1. Internet header length (IHL: 4 bit). Menjelaskan panjang dari header menggunakan 32-bit word. Ukuran minimum header yang diijinkan adalah 5 word.
+1. Type of service / jenis servis (8 bit). Data pada field ini menunjukkan kualitas layanan yang diinginkan.
+1. Total Length/panjang keseluruhan (16 bit). Panjang keseluruhan ICMP dalam oktet, termasuk header dan data IP. Field ini memungkinkan datagram berisi sampai 66535 oktet. Standar yang ada menganjurkan tiap host bersiap siap untuk menerima datagram dengan panjang paling tidak 576 oktet.
+1. Identification (16 bit). Field identifikasi digunakan untuk membantu proses penggabungan kembali pecahan-pecahan dari sebuah datagram.
+1. Flag (3 bit). Field ini berisi tiga control flag.
+1. Bit 0. Dicadangkan , harus 0.
+1. Bit 1 (DF). 0 = bisa dipecah menjadi fragmen; 1 = tidak boleh dipecah
+1. Bit 2 (MF). 0 = fragmen terakhir; 1 = masih ada fragmen lagi.
+1. Bila sebuah datagram dipecah, MF bit untuk tiap fragmen kecuali yang terakhir bernilai 1.
+1. Fragment Offset / posisi fragmen (13 bit). Untuk datagram yang dipecah, menunjukkan posisi fragmen ini dalam datagram.
+1. Time To Live / waktu hidup (8 bit). Menunjukkan waktu maksimum bagi sebuah datagram untuk berada dalam suatu jaringan. Bila field ini memberi nilai 0, datagram akan dibuang. Field ini di modifikasi selama tahap pemrosesan header IP dan umum nya dihitung dalam detik. Namun tiap modul IP yang menangani datagram harus mengurangi Time To Live ini dengan 1. mekanisme ini memastikan bahwa datagram yang tak terkirim suatu saat akan dibuang.
+1. Protokol (8 bit). Protokol lapisan atas yang berhubungan dengan bagian data dari datagram.
+1. Header checksum (16 bit) Sebuah nilai checksum untuk header saja. Nilai ini harus dihitung ulang tiap kali header dimodifikasi.
+1. Source Address (32 bit). Alamat IP dari host yang mengirimkan datagram.
+1. Destination Address (32 bit). Alamat IP dari host yang merupakan tujuan akhir datagram.
+1. Option (0 sampai 11 32-bit word). Dapat berisi 0 atau lebih pilihan.
 
-Ujung A (Konektor 1)
-- Orange Putih pada Pin 
-- Orange pada Pin 
-- Hijau Putih pada Pin 
-- Biru pada Pin 
-- Biru Putih pada Pin 
-- Hijau pada Pin 
-- Coklat Putih pada Pin 
-- Coklat pada Pin 
+**Ethernet II**
 
-Ujung B (Konektor 2)
-- Hijau Putih pada Pin 
-- Hijau pada Pin 
-- Orange Putih pada Pin 
-- Biru pada Pin 
-- Biru Putih pada Pin 
-- Orange pada Pin 
-- Coklat Putih pada Pin 
-- Coklat pada Pin 
+![Screenshot-4306.png](https://i.postimg.cc/768Z8PhF/Screenshot-4306.png)
 
-# 3. PENGETESAN KABEL UTP
-Langkah untuk mengecek kabel yang sudah kita buat tadi yaitu dengan menggunakan LAN tester, caranya masukan masing-masing ujung kabel (konektor RJ-45) ke masing2 port yang tersedia pada LAN tester, nyalakan dan pastikan semua lampu LED menyala sesuai dengan urutan kabel yang kita buat.
+1. Prembule – Bingkai Ethernet dimulai dengan Pembukaan 7-Bytes. Ini adalah pola alternatif 0 dan 1 yang menunjukkan awal dari frame dan memungkinkan pengirim dan penerima untuk membuat sinkronisasi bit. Awalnya, PRE (Pembukaan) diperkenalkan untuk memungkinkan hilangnya beberapa bit karena penundaan sinyal. Tetapi Ethernet berkecepatan tinggi saat ini tidak memerlukan Pembukaan untuk melindungi bit frame. PRE (Pembukaan) menunjukkan penerima bahwa frame akan datang dan memungkinkan penerima untuk mengunci ke aliran data sebelum frame yang sebenarnya dimulai.
+1. Start of frame delimiter (SFD) – Ini adalah bidang 1-Byte yang selalu disetel ke 10101011. SFD menunjukkan bahwa bit yang akan datang memulai dari frame, yang merupakan alamat tujuan. Terkadang SFD dianggap sebagai bagian dari PRE, inilah alasan Pembukaan digambarkan sebagai 8 Bytes di banyak tempat. SFD memperingatkan stasiun atau stasiun bahwa ini adalah kesempatan terakhir untuk sinkronisasi.
+1. Destination Address – Ini adalah bidang 6-Byte yang berisi alamat MAC mesin tempat data ditujukan.
+1. Source Address – Ini adalah bidang 6-Byte yang berisi alamat MAC mesin sumber. Karena Alamat Sumber selalu merupakan alamat individu (Unicast), bit paling tidak signifikan dari byte pertama selalu 0. Panjang – Panjang adalah bidang 2-Byte, yang menunjukkan panjang seluruh bingkai Ethernet. Bidang 16-bit ini dapat menampung nilai panjang antara 0 hingga 65534, tetapi panjangnya tidak boleh lebih besar dari 1500 karena beberapa keterbatasan Ethernet sendiri.
+1. Data – Ini adalah tempat di mana data aktual dimasukkan, juga dikenal sebagai Payload . Baik header IP dan data akan disisipkan di sini jika Internet Protocol digunakan melalui Ethernet. Data maksimum yang ada mungkin selama 1500 Bytes. Jika panjang data kurang dari panjang minimum yaitu 46 byte, maka padding 0 ditambahkan untuk memenuhi panjang minimum yang mungkin.
+1. Cyclic Redundancy Check (CRC) – CRC adalah bidang 4 Byte. Bidang ini berisi kode hash data 32-bit, yang dihasilkan melalui bidang Alamat Tujuan, Alamat Sumber, Panjang, dan Data. Jika checksum yang dihitung oleh tujuan tidak sama dengan nilai checksum yang dikirim, data yang diterima rusak.
 
-![LAN Tester](https://www.ceristekno.com/wp-content/uploads/2013/10/lan-taster-1.jpg)
+REFERENSI
+<https://ojs.unud.ac.id/index.php/JLK/article/download/2796/1988#:~:text=SCTP%20adalah%20protokol%20message%2D%20oriented,kongesti%20dan%20mekanisme%20kontrol%20aliran>. 
 
-3.1 ALAT PENGETESAN
-Alat pengetesan pada kabel utp biasanya menggunakan Lan Tester. Lan Tester adalah alat untuk mengecek koneksi sambungan kabel LAN RJ 45 dan RJ 11. Dilengkapi dengan lampu indikator, tombol pengatur kecepatan pengecekan, serta baterai dan kantong kecil. Dari namananya saja sudah jelas bahwa LAN tester adalah alat untuk mengecek sambungan rangkaian kabel LAN RJ 45 dan RJ 11.
+<https://heriyansah007.wordpress.com/2013/10/21/what-is-time-to-live-ttl/#:~:text=Time%20to%20Live%20(TTL)%20adalah,terpasang%20atau%20tertanam%20dalam%20data>. 
 
-3.2 PENGETESAN KABEL
-Cara Pengetesan kabel croos Fungsi kabel Straight adalah digunakan untuk menghubungkan 2 device yang berbeda dan merupakan kabel yang memiliki cara pemasangan yang sama antara ujung satu dengan ujung yang lainnya. Jika kalian mengecek kabel stright, maka lampu no 1 - 8 harus hidup semua secara berurutan.
--  Nomor:Lampu	Pasangan
-1:1
-2:2
-3:3
-4:4
-5:5
-6:6
-7:7
-8:8
+<https://en.wikipedia.org/wiki/Internet_checksum> 
 
-![LAN Tester](https://images.tokopedia.net/img/cache/500-square/VqbcmM/2020/9/28/8b94c97d-acb7-4136-9cea-99b6c5927776.jpg)
+<https://support.microsoft.com/id-id/topic/mencegah-traffic-smb-dari-koneksi-lateral-dan-memasukkan-atau-meninggalkan-jaringan-c0541db7-2244-0dce-18fd-14a3ddeb282a#:~:text=Blok%20pesan%20server%20(SMB)%20adalah,untuk%20mengakses%20data%20di%20server>. 
 
-Cara Pengetesan kabel straight fungsi kabel Cross adalah digunakan untuk menghubungkan 2 device yang sama, Susunan kabelnya yang berbeda antara ujung satu dengan ujung yang lainnya. Walaupun jenis kombinasi kabelnya berbeda tapi cross menggunakan kabel yang sama yaitu kabel UTP. Dan jika kalian ingin mengecek kabel cross, urutan lampu nya berbeda dengan urutan lampu kabel stright.
-- Nomor:Lampu	Pasangan
-1:1
-2:2
-3:3
-4:4
-5:5
-6:6
-7:7
-8:8
+<https://en.wikipedia.org/wiki/DCE/RPC> 
+
+<https://accurate.id/teknologi/routing-adalah/>
+
+<https://www.cisco.com/assets/sol/sb/Switches_Emulators_v2_3_5_xx/help/250/index.html#page/tesla_250_olh/types_of_attacks.html>
+
+<https://www.baktikominfo.id/en/informasi/pengetahuan/mengenal_tentang_udp_pengertian_fungsi_cara_kerja_serta_kelebihan_dan_kelemahannya-697>
+
+<https://www.teorikomputer.com/2016/01/pengertian-broadcast-pada-jaringan.html>
