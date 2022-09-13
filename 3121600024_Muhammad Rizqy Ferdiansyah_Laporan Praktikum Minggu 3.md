@@ -6,16 +6,16 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 
 ## Sekenario 1 || PC0 ke PC1
 ![](https://i.postimg.cc/fRLTprDV/Screenshot-2022-09-11-202337.png) \
-![](https://i.postimg.cc/rpGVrX9Y/Screenshot-2022-09-11-203217.png)
-![](https://i.postimg.cc/CxLXNyYQ/Screenshot-2022-09-11-203508.png)
-![](https://i.postimg.cc/GmVKs6pY/Screenshot-2022-09-11-203724.png)
-![](https://i.postimg.cc/g2tzyH93/Screenshot-2022-09-11-204003.png)
-![](https://i.postimg.cc/9z3TfHbF/Screenshot-2022-09-11-204511.png)
-![](https://i.postimg.cc/wTdQHDG5/Screenshot-2022-09-11-204633.png)
-![](https://i.postimg.cc/4xPDpf9M/Screenshot-2022-09-11-205013.png)
-![](https://i.postimg.cc/Cx8ZK2nz/Screenshot-2022-09-11-205148.png)
+![](https://i.postimg.cc/rpGVrX9Y/Screenshot-2022-09-11-203217.png) \
+![](https://i.postimg.cc/CxLXNyYQ/Screenshot-2022-09-11-203508.png) \
+![](https://i.postimg.cc/GmVKs6pY/Screenshot-2022-09-11-203724.png) \
+![](https://i.postimg.cc/g2tzyH93/Screenshot-2022-09-11-204003.png) \
+![](https://i.postimg.cc/9z3TfHbF/Screenshot-2022-09-11-204511.png) \
+![](https://i.postimg.cc/wTdQHDG5/Screenshot-2022-09-11-204633.png) \
+![](https://i.postimg.cc/4xPDpf9M/Screenshot-2022-09-11-205013.png) \
+![](https://i.postimg.cc/Cx8ZK2nz/Screenshot-2022-09-11-205148.png) \
 
-Hasilnya terjadi Broadcast karena baru pertama kali mengirim data
+Hasilnya terjadi Broadcast karena baru pertama kali mengirim data.
 
 
 
@@ -28,7 +28,7 @@ Hasilnya terjadi Broadcast karena baru pertama kali mengirim data
 ![](https://i.postimg.cc/CxVg0rGh/Screenshot-2022-09-11-210303.png)
 ![](https://i.postimg.cc/KztW0xWt/Screenshot-2022-09-11-210506.png)
 
-Hasilnya tidak terjadi broadcast karena IP PC1 sudah tersimpan di arp
+Hasilnya tidak terjadi broadcast karena IP PC1 sudah tersimpan di arp.
 
 
 
@@ -43,4 +43,4 @@ Hasilnya tidak terjadi broadcast karena IP PC1 sudah tersimpan di arp
 ![](https://i.postimg.cc/13Q3Br3d/Screenshot-2022-09-11-211533.png)
 ![](https://i.postimg.cc/Ls7dCmVs/Screenshot-2022-09-11-211657.png)
 
-Hasilnya tidak terjadi broadcast karena IP PC0 sudah tercatat di apr PC1, PC1 menyimpan IP saat mengembalikan data ke PC0 saat sekenario pertama
+Hasilnya tidak terjadi broadcast karena IP PC0 sudah tercatat di apr PC1, PC1 menyimpan IP saat mengembalikan data ke PC0 saat sekenario pertama.
