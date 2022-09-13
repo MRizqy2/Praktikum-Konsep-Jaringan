@@ -5,7 +5,7 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 2-D4 IT A
 
 ## Sekenario 1 || PC0 ke PC1
-![](https://i.postimg.cc/fRLTprDV/Screenshot-2022-09-11-202337.png) <br\>
+![](https://i.postimg.cc/fRLTprDV/Screenshot-2022-09-11-202337.png) <br \>
 ![](https://i.postimg.cc/rpGVrX9Y/Screenshot-2022-09-11-203217.png)
 ![](https://i.postimg.cc/CxLXNyYQ/Screenshot-2022-09-11-203508.png)
 ![](https://i.postimg.cc/GmVKs6pY/Screenshot-2022-09-11-203724.png)
