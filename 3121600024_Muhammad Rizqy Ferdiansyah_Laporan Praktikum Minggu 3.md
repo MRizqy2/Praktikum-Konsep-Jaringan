@@ -5,7 +5,7 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 2-D4 IT A
 
 ## Sekenario 1 || PC0 ke PC1
-![](https://i.postimg.cc/fRLTprDV/Screenshot-2022-09-11-202337.png)
+![](https://i.postimg.cc/fRLTprDV/Screenshot-2022-09-11-202337.png) <br\>
 ![](https://i.postimg.cc/rpGVrX9Y/Screenshot-2022-09-11-203217.png)
 ![](https://i.postimg.cc/CxLXNyYQ/Screenshot-2022-09-11-203508.png)
 ![](https://i.postimg.cc/GmVKs6pY/Screenshot-2022-09-11-203724.png)
@@ -17,6 +17,8 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 
 Hasilnya terjadi Broadcast karena baru pertama kali mengirim data
 
+
+
 ## Sekenario 2 || PC0 ke PC1
 ![](https://i.postimg.cc/Y01WsyN4/Screenshot-2022-09-11-205409.png)
 ![](https://i.postimg.cc/d0bDcjVG/Screenshot-2022-09-11-205502.png)
@@ -27,6 +29,8 @@ Hasilnya terjadi Broadcast karena baru pertama kali mengirim data
 ![](https://i.postimg.cc/KztW0xWt/Screenshot-2022-09-11-210506.png)
 
 Hasilnya tidak terjadi broadcast karena IP PC1 sudah tersimpan di arp
+
+
 
 ## Sekenario 3 || PC1 ke PC0
 
