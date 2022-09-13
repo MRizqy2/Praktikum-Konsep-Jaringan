@@ -43,4 +43,4 @@ Hasilnya tidak terjadi broadcast karena IP PC1 sudah tersimpan di ARP.
 ![](https://i.postimg.cc/13Q3Br3d/Screenshot-2022-09-11-211533.png) \
 ![](https://i.postimg.cc/Ls7dCmVs/Screenshot-2022-09-11-211657.png)
 
-Hasilnya tidak terjadi broadcast karena IP PC0 sudah tercatat di ARP PC1, PC1 menyimpan IP saat mengembalikan data ke PC0 saat sekenario pertama.
+Hasilnya tidak terjadi broadcast karena IP PC0 sudah tercatat di ARP PC1, Karena dari PC0 sudah berisi MAC / Phsyical Address.
