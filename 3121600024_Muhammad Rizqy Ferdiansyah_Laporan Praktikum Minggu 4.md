@@ -37,7 +37,7 @@ Konfigurasi router diperlukan untuk menentukan rute yang dapat dilalui oleh pake
 
 Percobaan ping dari PC-0 ke PC-1
 
-![ping](assets/ping%201.png)
+![Topologi2.png](https://i.postimg.cc/XJgx0391/Topologi2.png)
 
 Terjadi RTO 2 kali pada ping pertama dan ping kedua disebabkan terjadinya arp pada saat broadcast domain antara PC-0 dengan router0 dan terjadi brodcast lagi pada saat ping kedua antara router0 an router1. pada ping ketiga baru terhubung langsung sebab proses arp sudah selesai.
 
@@ -60,6 +60,6 @@ Konfigurasi IP yang akan digunakan sebagai berikut :
 
 Percobaan ping dari PC-0 ke PC-2 yang memiliki jaringan berbeda.
 
-![ping](assets/ping%202.png)
+![Ping2.png](https://i.postimg.cc/qvZLkjh0/Ping2.png)
 
 PC-0 dan PC-2 otomasi akan terhubung sebelum menambahkan routing manual sebab routing pada jaringan akan terjadi secara otomatis saat kita menambahkan ip ke router yang dinamakan directly connected.
