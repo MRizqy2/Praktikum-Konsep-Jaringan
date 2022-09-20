@@ -35,7 +35,7 @@ Router1
 
 Konfigurasi router diperlukan untuk menentukan rute yang dapat dilalui oleh paket saat mencari tujuan menggunakan jaringan yang sudah ada.
 
--Test ping dari PC-0 ke PC-1
+- Test ping dari PC-0 ke PC-1
 
 ![Ping1.png](https://i.postimg.cc/fLbZNqYZ/Ping1.png)
 
