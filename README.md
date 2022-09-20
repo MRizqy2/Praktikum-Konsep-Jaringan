@@ -1,46 +1,67 @@
-# Laporan Praktikum Konsep Jaringan Minggu ke 3
+# Laporan Praktikum Konsep Jaringan Minggu ke 4
 
 Muhammad Rizqy Ferdiansyah (3121600024)
 
 2-D4 IT A
 
-## Sekenario 1 || PC0 ke PC1
-![](https://i.postimg.cc/fRLTprDV/Screenshot-2022-09-11-202337.png)
-![](https://i.postimg.cc/rpGVrX9Y/Screenshot-2022-09-11-203217.png) \
-![](https://i.postimg.cc/CxLXNyYQ/Screenshot-2022-09-11-203508.png) \
-![](https://i.postimg.cc/GmVKs6pY/Screenshot-2022-09-11-203724.png)
-![](https://i.postimg.cc/g2tzyH93/Screenshot-2022-09-11-204003.png) \
-![](https://i.postimg.cc/9z3TfHbF/Screenshot-2022-09-11-204511.png) \
-![](https://i.postimg.cc/wTdQHDG5/Screenshot-2022-09-11-204633.png) \
-![](https://i.postimg.cc/4xPDpf9M/Screenshot-2022-09-11-205013.png) \
-![](https://i.postimg.cc/Cx8ZK2nz/Screenshot-2022-09-11-205148.png)
+# Static Routing
 
-Hasilnya terjadi Broadcast karena baru pertama kali mengirim data.
+# A. Percobaan Static Routing
 
+Berikut merupakan topologi dari static routing yang membutuhkan 2 pc dan 2 router dengan subneting.
 
+![Topologi.png](https://i.postimg.cc/ZnJ0kxVh/Topologi.png)
 
-## Sekenario 2 || PC0 ke PC1
-![](https://i.postimg.cc/Y01WsyN4/Screenshot-2022-09-11-205409.png) \
-![](https://i.postimg.cc/d0bDcjVG/Screenshot-2022-09-11-205502.png) \
-![](https://i.postimg.cc/BQrzD8bM/Screenshot-2022-09-11-205656.png)
-![](https://i.postimg.cc/G9wjByKD/Screenshot-2022-09-11-205813.png) \
-![](https://i.postimg.cc/PJ2wHvch/Screenshot-2022-09-11-210058.png) \
-![](https://i.postimg.cc/CxVg0rGh/Screenshot-2022-09-11-210303.png) \
-![](https://i.postimg.cc/KztW0xWt/Screenshot-2022-09-11-210506.png)
+Konfigurasi IP yang akan digunakan sebagai berikut :
 
-Hasilnya tidak terjadi broadcast karena IP PC1 sudah tersimpan di ARP.
+| Perangkat | Interface | IP Address     | Gateway     |
+| --------- | --------- | -------------- | ----------- |
+| PC0       | fa0       | 192.168.1.2/24 | 192.168.1.1 |
+| PC1       | fa0       | 192.168.3.3/24 | 192.168.3.2 |
+| Router0   | Gig0/1    | 192.168.1.1/24 |             |
+|           | Gig0/0    | 192.168.2.1/24 |             |
+| Router1   | Gig0/0    | 192.168.2.2/24 |             |
+|           | Gig0/1    | 192.168.3.2/24 |             |
 
+Kita juga membutuhkan konfigurasi router staticnya. berikut konfigurasi routing staticnya :
 
+Router0
 
-## Sekenario 3 || PC1 ke PC0
+- ip route 192.168.3.0 - 255.255.255.0 - 192.168.2.2
 
-![](https://i.postimg.cc/bNYyWwhy/Screenshot-2022-09-11-210730.png)
-![](https://i.postimg.cc/bNYyWwhy/Screenshot-2022-09-11-210730.png) \
-![](https://i.postimg.cc/5yCRkv27/Screenshot-2022-09-11-211035.png) \
-![](https://i.postimg.cc/SN4dpHTN/Screenshot-2022-09-11-211207.png)
-![](https://i.postimg.cc/SRkMwbyB/Screenshot-2022-09-11-211317.png) \
-![](https://i.postimg.cc/7Yb6bZQB/Screenshot-2022-09-11-211423.png) \
-![](https://i.postimg.cc/13Q3Br3d/Screenshot-2022-09-11-211533.png) \
-![](https://i.postimg.cc/Ls7dCmVs/Screenshot-2022-09-11-211657.png)
+Router1
 
-Hasilnya tidak terjadi broadcast karena IP PC0 sudah tercatat di ARP PC1, Karena dari PC0 sudah berisi MAC / Phsyical Address.
+- ip route 192.168.1.0 - 255.255.255.0 - 192.168.2.1
+
+Konfigurasi router diperlukan untuk menentukan rute yang dapat dilalui oleh paket saat mencari tujuan menggunakan jaringan yang sudah ada.
+
+- Test ping dari PC-0 ke PC-1
+
+![Ping1.png](https://i.postimg.cc/fLbZNqYZ/Ping1.png)
+
+Pada Percobaan diatas terjadi RTO 2 kali pada ping pertama dan ping kedua disebabkan terjadinya arp pada saat broadcast domain antara PC-0 dengan router0 dan terjadi brodcast lagi pada saat ping kedua antara router0 an router1. Pada ping ketiga baru terhubung langsung sebab proses arp sudah selesai.
+
+# B. Percobaan 1 router 2 Jaringan
+
+Berikut merupakan topologi dari 2 jaringan yang terhubung ke sebuah router yang sama.
+
+![Topologi2.png](https://i.postimg.cc/XJgx0391/Topologi2.png)
+
+Konfigurasi IP yang akan digunakan sebagai berikut :
+
+| Perangkat | Interface | IP Address     | Gateway     |
+| --------- | --------- | -------------- | ----------- |
+| PC0       | fa0       | 192.168.1.2/24 | 192.168.1.1 |
+| PC1       | fa0       | 192.168.1.3/24 | 192.168.1.1 |
+| PC2       | fa0       | 192.168.2.2/24 | 192.168.2.1 |
+| PC3       | fa0       | 192.168.2.3/24 | 192.168.2.1 |
+| Router0   | Gig0/1    | 192.168.1.1/24 |             |
+|           | Gig0/0    | 192.168.2.1/24 |             |
+
+Percobaan ping dari PC-0 ke PC-2 yang memiliki jaringan berbeda.
+
+- Test Ping
+
+![Ping2.png](https://i.postimg.cc/MHxt5f0X/Ping2.png)
+
+Pada Percobaan diatas PC-0 dan PC-2 otomasi akan terhubung sebelum menambahkan routing manual sebab routing pada jaringan akan terjadi secara otomatis saat kita menambahkan ip ke router yang dinamakan directly connected.
