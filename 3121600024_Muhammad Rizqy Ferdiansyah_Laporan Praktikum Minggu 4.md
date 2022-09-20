@@ -62,4 +62,4 @@ Percobaan ping dari PC-0 ke PC-2 yang memiliki jaringan berbeda.
 
 ![Ping2.png](https://i.postimg.cc/qvZLkjh0/Ping2.png)
 
-PC-0 dan PC-2 otomasi akan terhubung sebelum menambahkan routing manual sebab routing pada jaringan akan terjadi secara otomatis saat kita menambahkan ip ke router yang dinamakan directly connected.
+PC-0 dan PC-2 otomasi akan terhubung sebelum menambahkan routing manual sebab routing pada jaringan akan terjadi secara otomatis saat kita menambahkan ip ke router yang dinamakan directly connected..
