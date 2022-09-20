@@ -37,7 +37,7 @@ Konfigurasi router diperlukan untuk menentukan rute yang dapat dilalui oleh pake
 
 Percobaan ping dari PC-0 ke PC-1
 
-[![Ping1.png](https://i.postimg.cc/fLbZNqYZ/Ping1.png)]
+![Ping1.png](https://i.postimg.cc/fLbZNqYZ/Ping1.png)
 
 Terjadi RTO 2 kali pada ping pertama dan ping kedua disebabkan terjadinya arp pada saat broadcast domain antara PC-0 dengan router0 dan terjadi brodcast lagi pada saat ping kedua antara router0 an router1. pada ping ketiga baru terhubung langsung sebab proses arp sudah selesai.
 
@@ -45,7 +45,7 @@ Terjadi RTO 2 kali pada ping pertama dan ping kedua disebabkan terjadinya arp pa
 
 Berikut merupakan topologi dari 2 jaringan yang terhubung ke sebuah router yang sama.
 
-![topologi](assets/topologi%202.png)
+![Topologi2.png](https://i.postimg.cc/XJgx0391/Topologi2.png)
 
 Konfigurasi IP yang akan digunakan sebagai berikut :
 
