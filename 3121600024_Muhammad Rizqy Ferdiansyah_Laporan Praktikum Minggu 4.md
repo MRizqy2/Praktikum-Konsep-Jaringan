@@ -35,7 +35,7 @@ Router1
 
 Konfigurasi router diperlukan untuk menentukan rute yang dapat dilalui oleh paket saat mencari tujuan menggunakan jaringan yang sudah ada.
 
-Percobaan ping dari PC-0 ke PC-1
+-Test ping dari PC-0 ke PC-1
 
 ![Ping1.png](https://i.postimg.cc/fLbZNqYZ/Ping1.png)
 
@@ -59,6 +59,8 @@ Konfigurasi IP yang akan digunakan sebagai berikut :
 |           | Gig0/0    | 192.168.2.1/24 |             |
 
 Percobaan ping dari PC-0 ke PC-2 yang memiliki jaringan berbeda.
+
+- Test Ping
 
 ![Ping2.png](https://i.postimg.cc/MHxt5f0X/Ping2.png)
 
