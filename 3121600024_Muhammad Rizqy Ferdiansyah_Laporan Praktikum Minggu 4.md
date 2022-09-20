@@ -6,7 +6,7 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 
 # Static Routing
 
-## A. Percobaan Static Routing
+# A. Percobaan Static Routing
 
 Berikut merupakan topologi dari static routing yang membutuhkan 2 pc dan 2 router dengan subneting.
 
@@ -41,7 +41,7 @@ Percobaan ping dari PC-0 ke PC-1
 
 Pada Percobaan diatas terjadi RTO 2 kali pada ping pertama dan ping kedua disebabkan terjadinya arp pada saat broadcast domain antara PC-0 dengan router0 dan terjadi brodcast lagi pada saat ping kedua antara router0 an router1. Pada ping ketiga baru terhubung langsung sebab proses arp sudah selesai.
 
-## B. Percobaan 1 router 2 Jaringan
+# B. Percobaan 1 router 2 Jaringan
 
 Berikut merupakan topologi dari 2 jaringan yang terhubung ke sebuah router yang sama.
 
@@ -60,6 +60,6 @@ Konfigurasi IP yang akan digunakan sebagai berikut :
 
 Percobaan ping dari PC-0 ke PC-2 yang memiliki jaringan berbeda.
 
-![Ping2.png](https://i.postimg.cc/qvZLkjh0/Ping2.png)
+![Ping2.png](https://i.postimg.cc/MHxt5f0X/Ping2.png)
 
 Pada Percobaan diatas PC-0 dan PC-2 otomasi akan terhubung sebelum menambahkan routing manual sebab routing pada jaringan akan terjadi secara otomatis saat kita menambahkan ip ke router yang dinamakan directly connected.
