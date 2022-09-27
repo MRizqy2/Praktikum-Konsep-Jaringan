@@ -1,67 +1,54 @@
-# Laporan Praktikum Konsep Jaringan Minggu ke 4
+# Laporan Praktikum Konsep Jaringan Minggu ke 5
 
 Muhammad Rizqy Ferdiansyah (3121600024)
 
 2-D4 IT A
 
-# Static Routing
+# VLAN
 
-# A. Percobaan Static Routing
+## A. Pengertian VLAN
 
-Berikut merupakan topologi dari static routing yang membutuhkan 2 pc dan 2 router dengan subneting.
+VLAN adalah virtual local area network atau suatu model jaringan yang tidak terbatas pada lokasi fisik seperti LAN, hal ini mengakibatkan suatu network dapat dikonfigurasi secara virtual tanpa harus menuruti lokasi fisik peralatan. Penggunaan VLAN akan membuat pengaturan jaringan menjadi sangat fleksibel karena dapat dibuat segmen yang bergantung pada organisasi, tanpa bergantung lokasi workstations, eperti kita ketahui bahwa switch tidak bisa membaca Layer 3 sehingga tidak bisa membaca Network sehingga hanya bisa dihubungkan hanya satu network saja.
 
-![Topologi.png](https://i.postimg.cc/ZnJ0kxVh/Topologi.png)
+## Kegunaan VLAN
 
-Konfigurasi IP yang akan digunakan sebagai berikut :
+- Menimalisir kemungkinan terjadinya konflik IP yang terlalu banyak.
+- Mencegah terjadinya collision domain (tabrakan domain).
+- Mengurangi tingkat vulnerabilities.
 
-| Perangkat | Interface | IP Address     | Gateway     |
-| --------- | --------- | -------------- | ----------- |
-| PC0       | fa0       | 192.168.1.2/24 | 192.168.1.1 |
-| PC1       | fa0       | 192.168.3.3/24 | 192.168.3.2 |
-| Router0   | Gig0/1    | 192.168.1.1/24 |             |
-|           | Gig0/0    | 192.168.2.1/24 |             |
-| Router1   | Gig0/0    | 192.168.2.2/24 |             |
-|           | Gig0/1    | 192.168.3.2/24 |             |
+## Percobaan Topologi
 
-Kita juga membutuhkan konfigurasi router staticnya. berikut konfigurasi routing staticnya :
+![Topologi.png](https://i.postimg.cc/m29X7GjF/Topologi.png)
 
-Router0
-
-- ip route 192.168.3.0 - 255.255.255.0 - 192.168.2.2
-
-Router1
-
-- ip route 192.168.1.0 - 255.255.255.0 - 192.168.2.1
-
-Konfigurasi router diperlukan untuk menentukan rute yang dapat dilalui oleh paket saat mencari tujuan menggunakan jaringan yang sudah ada.
-
-- Test ping dari PC-0 ke PC-1
-
-![Ping1.png](https://i.postimg.cc/fLbZNqYZ/Ping1.png)
-
-Pada Percobaan diatas terjadi RTO 2 kali pada ping pertama dan ping kedua disebabkan terjadinya arp pada saat broadcast domain antara PC-0 dengan router0 dan terjadi brodcast lagi pada saat ping kedua antara router0 an router1. Pada ping ketiga baru terhubung langsung sebab proses arp sudah selesai.
-
-# B. Percobaan 1 router 2 Jaringan
-
-Berikut merupakan topologi dari 2 jaringan yang terhubung ke sebuah router yang sama.
-
-![Topologi2.png](https://i.postimg.cc/XJgx0391/Topologi2.png)
+- Topologi di atas terdiri dari 1 router, 1 switch, dan 3 pc-client dengan 2 VLAN (172.17.10.11 - 10 [VLAN10] & 172.17.30.11 - 30 [VLAN30]) dan 1 Non-VLAN (172.17.1.1).
 
 Konfigurasi IP yang akan digunakan sebagai berikut :
 
-| Perangkat | Interface | IP Address     | Gateway     |
-| --------- | --------- | -------------- | ----------- |
-| PC0       | fa0       | 192.168.1.2/24 | 192.168.1.1 |
-| PC1       | fa0       | 192.168.1.3/24 | 192.168.1.1 |
-| PC2       | fa0       | 192.168.2.2/24 | 192.168.2.1 |
-| PC3       | fa0       | 192.168.2.3/24 | 192.168.2.1 |
-| Router0   | Gig0/1    | 192.168.1.1/24 |             |
-|           | Gig0/0    | 192.168.2.1/24 |             |
+| Device  | Interface | IP Address      | Gateway      |
+| ------- | --------- | --------------- | ------------ |
+| Router0 | vlan10    | 172.17.10.1/24  |              |
+|         | vlan30    | 172.17.30.1/24  |              |
+| pc0     | fa0/1     | 172.17.10.21/24 | 172.17.10.24 |
+| pc1     | fa0/3     | 172.17.30.23/24 | 172.17.30.24 |
 
-Percobaan ping dari PC-0 ke PC-2 yang memiliki jaringan berbeda.
+- Vlan 10 akan melalui port gi0/0 pada router dan port fa0/3 pada switch, sedangkan vlan 30 akan melalui port gi0/1 pada router dan port fa0/4 pada switch
 
-- Test Ping
+![gi0-0.png](https://i.postimg.cc/T2smfLrr/gi0-0.png)
 
-![Ping2.png](https://i.postimg.cc/MHxt5f0X/Ping2.png)
+![gi0-1.png](https://i.postimg.cc/ZRcG6zLS/gi0-1.png)
 
-Pada Percobaan diatas PC-0 dan PC-2 otomasi akan terhubung sebelum menambahkan routing manual sebab routing pada jaringan akan terjadi secara otomatis saat kita menambahkan ip ke router yang dinamakan directly connected.
+- Konfigurasi pada switch supaya dapat terhubung dengan jaringan dari router ke pc tujuan. PC0 terhubung dengan switch pada port fa0/1 yang memiliki akses vlan 10 dan PC1 terhubung dengan switch pada port fa0/3 yang memiliki akses vlan 30
+
+![vlan-config.png](https://i.postimg.cc/hGPDws3c/vlan-config.png)
+
+![fe0-1.png](https://i.postimg.cc/5t0HvfJB/fe0-1.png)
+
+![fe0-2.png](https://i.postimg.cc/8znp2M8v/fe0-2.png)
+
+![fe0-3.png](https://i.postimg.cc/1Rc99Lhs/fe0-3.png)
+
+![fe0-4.png](https://i.postimg.cc/445gCVV3/fe0-4.png)
+
+- Testing ping PC0 ke PC1
+
+![ping-1.png](https://i.postimg.cc/Hk3zdW3X/ping-1.png)
