@@ -8,7 +8,7 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 
 ## Topologi
 
-![gig0.png](https://i.postimg.cc/wM1XHjcC/gig0.png)
+![Topologi.png](https://i.postimg.cc/P5Dz7J29/Topologi.png)
 
 Konfigurasi IP yang digunakan :
 
