@@ -1,54 +1,79 @@
-# Laporan Praktikum Konsep Jaringan Minggu ke 5
+# Laporan Praktikum Konsep Jaringan Minggu ke 6
 
 Muhammad Rizqy Ferdiansyah (3121600024)
 
 2-D4 IT A
 
-# VLAN
+# VLAN Trunk dan Access
 
-## A. Pengertian VLAN
+## Topologi
 
-VLAN adalah virtual local area network atau suatu model jaringan yang tidak terbatas pada lokasi fisik seperti LAN, hal ini mengakibatkan suatu network dapat dikonfigurasi secara virtual tanpa harus menuruti lokasi fisik peralatan. Penggunaan VLAN akan membuat pengaturan jaringan menjadi sangat fleksibel karena dapat dibuat segmen yang bergantung pada organisasi, tanpa bergantung lokasi workstations, eperti kita ketahui bahwa switch tidak bisa membaca Layer 3 sehingga tidak bisa membaca Network sehingga hanya bisa dihubungkan hanya satu network saja.
+![gig0.png](https://i.postimg.cc/wM1XHjcC/gig0.png)
 
-## Kegunaan VLAN
+Konfigurasi IP yang digunakan :
 
-- Menimalisir kemungkinan terjadinya konflik IP yang terlalu banyak.
-- Mencegah terjadinya collision domain (tabrakan domain).
-- Mengurangi tingkat vulnerabilities.
+| Device   | Interface    | IP Address      | Gateway      |
+| -------- | ------------ | --------------- | ------------ |
+| Router0  | gig0/0       | 192.17.1.1/24   |              |
+| pc0      | vlan10       | 192.168.10.2/24 | 192.168.10.1 |
+| pc1      | vlan20       | 192.168.20.3/24 | 192.168.20.1 |
+| pc2      | vlan30       | 192.168.30.4/24 | 192.168.30.1 |
+| pc3      | vlan10       | 192.168.10.2/24 | 192.168.10.1 |
+| pc4      | vlan20       | 192.168.20.3/24 | 192.168.20.1 |
+| pc5      | vlan30       | 192.168.30.4/24 | 192.168.30.1 |
+| pc6      | vlan10       | 192.168.10.2/24 | 192.168.10.1 |
+| pc7      | vlan20       | 192.168.20.3/24 | 192.168.20.1 |
+| pc8      | vlan30       | 192.168.30.4/24 | 192.168.30.1 |
 
-## Percobaan Topologi
+| Device   | Interface    | IP Address      | Gateway      |
+| -------- | ------------ | --------------- | ------------ |
+| Switch 0 | fa0/1 vlan10 |                 |              |
+|          | fa0/2 vlan20 |                 |              |
+|          | fa0/3 vlan30 |                 |              |
+|          | fa0/10 trunk |                 |              |
+| Switch 1 | fa0/1 vlan10 |                 |              |
+|          | fa0/2 vlan20 |                 |              |
+|          | fa0/3 vlan30 |                 |              |
+|          | fa0/10 trunk |                 |              |
+|          | fa0/11 trunk |                 |              |
+|          | fa0/12 trunk |                 |              |
+| Switch 2 | fa0/1 vlan10 |                 |              |
+|          | fa0/2 vlan20 |                 |              |
+|          | fa0/3 vlan30 |                 |              |
+|          | fa0/10 trunk |                 |              |
 
-![Topologi.png](https://i.postimg.cc/m29X7GjF/Topologi.png)
+Konfigurasi pada switch 1 supaya dapat terhubung dengan switch 0 dan switch 2 yang terhbung juga deng router.
 
-- Topologi di atas terdiri dari 1 router, 1 switch, dan 3 pc-client dengan 2 VLAN (172.17.10.11 - 10 [VLAN10] & 172.17.30.11 - 30 [VLAN30]) dan 1 Non-VLAN (172.17.1.1).
+| Nama Divisi | Segmen IP    |
+|-------------|--------------|
+| Admin       |192.168.1.0/24|
+| Developer   |192.168.2.0/24|
+| Management  |192.168.3.0/24|
 
-Konfigurasi IP yang akan digunakan sebagai berikut :
+![vlanconf.png](https://i.postimg.cc/wB3LDBn7/vlanconf.png)
 
-| Device  | Interface | IP Address      | Gateway      |
-| ------- | --------- | --------------- | ------------ |
-| Router0 | vlan10    | 172.17.10.1/24  |              |
-|         | vlan30    | 172.17.30.1/24  |              |
-| pc0     | fa0/1     | 172.17.10.21/24 | 172.17.10.24 |
-| pc1     | fa0/3     | 172.17.30.23/24 | 172.17.30.24 |
+- Konfigurasi switch 0
 
-- Vlan 10 akan melalui port gi0/0 pada router dan port fa0/3 pada switch, sedangkan vlan 30 akan melalui port gi0/1 pada router dan port fa0/4 pada switch
+![switch0-fa10.png](https://i.postimg.cc/25XdtWnQ/switch0-fa10.png)
 
-![gi0-0.png](https://i.postimg.cc/T2smfLrr/gi0-0.png)
+- Konfigurasi switch 1
 
-![gi0-1.png](https://i.postimg.cc/ZRcG6zLS/gi0-1.png)
+![switch1-fa10.png](https://i.postimg.cc/jSDSXJd0/switch1-fa10.png)
 
-- Konfigurasi pada switch supaya dapat terhubung dengan jaringan dari router ke pc tujuan. PC0 terhubung dengan switch pada port fa0/1 yang memiliki akses vlan 10 dan PC1 terhubung dengan switch pada port fa0/3 yang memiliki akses vlan 30
+![switch1-fa11.png](https://i.postimg.cc/Tw62f7jf/switch1-fa11.png)
 
-![vlan-config.png](https://i.postimg.cc/hGPDws3c/vlan-config.png)
+![switch1-fa12.png](https://i.postimg.cc/RFSrgjQ6/switch1-fa12.png)
 
-![fe0-1.png](https://i.postimg.cc/5t0HvfJB/fe0-1.png)
+- Konfigurasi switch 2
 
-![fe0-2.png](https://i.postimg.cc/8znp2M8v/fe0-2.png)
+![switch2-fa10.png](https://i.postimg.cc/pdkcLyzr/switch2-fa10.png)
 
-![fe0-3.png](https://i.postimg.cc/1Rc99Lhs/fe0-3.png)
+- Konfigurasi pada router
 
-![fe0-4.png](https://i.postimg.cc/445gCVV3/fe0-4.png)
+![gig0.png](https://i.postimg.cc/wM1XHjcC/gig0.png)
 
-- Testing ping PC0 ke PC1
+- Testing ping PC-10.4 ke PC-10.2
 
-![ping-1.png](https://i.postimg.cc/Hk3zdW3X/ping-1.png)
+![test-ping.png](https://i.postimg.cc/05LvsH93/test-ping.png)
+
+Pada testing diatas PC-10.4 ke PC-10.2 sukses dilakukan karena PC-10.4 memiliki vlan yang sama dengan PC-10.2 yaitu vlan 10.
