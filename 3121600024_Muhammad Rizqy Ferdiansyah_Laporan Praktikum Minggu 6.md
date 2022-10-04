@@ -8,7 +8,7 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 
 ## Topologi
 
-![topologi](assets/topologi.png)
+![gig0.png](https://i.postimg.cc/wM1XHjcC/gig0.png)
 
 Konfigurasi IP yang digunakan :
 
@@ -50,30 +50,30 @@ Konfigurasi pada switch 1 supaya dapat terhubung dengan switch 0 dan switch 2 ya
 | Developer   |192.168.2.0/24|
 | Management  |192.168.3.0/24|
 
-![switch vlan config](assets/vlan%20config.png)
+![vlanconf.png](https://i.postimg.cc/wB3LDBn7/vlanconf.png)
 
 konfigurasi switch 0
 
-![config switch0 fa0/10](assets/sw0%20fa10.png)
+![switch0-fa10.png](https://i.postimg.cc/25XdtWnQ/switch0-fa10.png)
 
 konfigurasi switch 1
 
-![config switch1 fa0/10](assets/sw1%20fa10.png)
+![switch1-fa10.png](https://i.postimg.cc/jSDSXJd0/switch1-fa10.png)
 
-![config switch1 fa0/11](assets/sw1%20fa11.png)
+![switch1-fa11.png](https://i.postimg.cc/Tw62f7jf/switch1-fa11.png)
 
-![config switch1 fa0/12](assets/sw1%20fa12.png)
+![switch1-fa12.png](https://i.postimg.cc/RFSrgjQ6/switch1-fa12.png)
 
 konfigurasi switch 2
 
-![config switch2 fa0/10](assets/sw2%20fa10.png)
+![switch2-fa10.png](https://i.postimg.cc/pdkcLyzr/switch2-fa10.png)
 
 konfigurasi pada router
 
-![config router gig0/0](assets/gig%200.png)
+![gig0.png](https://i.postimg.cc/wM1XHjcC/gig0.png)
 
 Testing ping PC-10.4 ke PC-10.2 dan PC-10.4 ke PC30.3
 
-![ping](assets/test%20ping.png)
+![test-ping.png](https://i.postimg.cc/05LvsH93/test-ping.png)
 
 Pada testing ping diatas saat PC-10.4 ke PC-10.2 sukses dilakukan karena PC-10.4 memiliki vlan yang sama dengan PC-10.2 yaitu vlan 10, sedangkan saat melakukan ping dari PC-10.4 ke PC30.3 tidak sukses karena vlan yang digunakan berbeda PC-10.4 menggunakan vlan 10 dan PC30.3 menggunakan vlan 30 sehingga ping yang dikirim tidak akan perna sampai.
