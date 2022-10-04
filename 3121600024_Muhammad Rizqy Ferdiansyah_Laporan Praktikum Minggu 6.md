@@ -52,11 +52,11 @@ Konfigurasi pada switch 1 supaya dapat terhubung dengan switch 0 dan switch 2 ya
 
 ![vlanconf.png](https://i.postimg.cc/wB3LDBn7/vlanconf.png)
 
-konfigurasi switch 0
+- Konfigurasi switch 0
 
 ![switch0-fa10.png](https://i.postimg.cc/25XdtWnQ/switch0-fa10.png)
 
-konfigurasi switch 1
+- Konfigurasi switch 1
 
 ![switch1-fa10.png](https://i.postimg.cc/jSDSXJd0/switch1-fa10.png)
 
@@ -64,16 +64,16 @@ konfigurasi switch 1
 
 ![switch1-fa12.png](https://i.postimg.cc/RFSrgjQ6/switch1-fa12.png)
 
-konfigurasi switch 2
+- Konfigurasi switch 2
 
 ![switch2-fa10.png](https://i.postimg.cc/pdkcLyzr/switch2-fa10.png)
 
-konfigurasi pada router
+- Konfigurasi pada router
 
 ![gig0.png](https://i.postimg.cc/wM1XHjcC/gig0.png)
 
-Testing ping PC-10.4 ke PC-10.2 dan PC-10.4 ke PC30.3
+- Testing ping PC-10.4 ke PC-10.2
 
 ![test-ping.png](https://i.postimg.cc/05LvsH93/test-ping.png)
 
-Pada testing ping diatas saat PC-10.4 ke PC-10.2 sukses dilakukan karena PC-10.4 memiliki vlan yang sama dengan PC-10.2 yaitu vlan 10, sedangkan saat melakukan ping dari PC-10.4 ke PC30.3 tidak sukses karena vlan yang digunakan berbeda PC-10.4 menggunakan vlan 10 dan PC30.3 menggunakan vlan 30 sehingga ping yang dikirim tidak akan perna sampai.
+Pada testing diatas PC-10.4 ke PC-10.2 sukses dilakukan karena PC-10.4 memiliki vlan yang sama dengan PC-10.2 yaitu vlan 10.
