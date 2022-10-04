@@ -4,7 +4,7 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 
 2-D4 IT A
 
-# VLAN Trunk
+# VLAN Trunk dan Access
 
 ## Topologi
 
