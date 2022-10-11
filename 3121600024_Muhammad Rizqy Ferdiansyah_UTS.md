@@ -1,14 +1,14 @@
-# Laporan Praktikum Konsep Jaringan Minggu ke 6
+# Laporan Praktikum Konsep Jaringan (UTS)
 
 Muhammad Rizqy Ferdiansyah (3121600024)
 
 2-D4 IT A
 
-# VLAN Trunk dan Access
+# 
 
 ## Topologi
 
-![Topologi.png](https://i.postimg.cc/P5Dz7J29/Topologi.png)
+![Topologi.png](https://i.postimg.cc/NMBwqCxy/Topologi.png)
 
 Konfigurasi IP yang digunakan :
 
