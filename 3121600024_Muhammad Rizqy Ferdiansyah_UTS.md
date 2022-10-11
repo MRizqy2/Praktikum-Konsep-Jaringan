@@ -17,6 +17,7 @@ Diketahui desain sebuah jaringan 2 lantai digambarkan dalam Gambar 1.  Sedangkan
 Setelah anda berhasil mengkonfigurasi seluruh perangkat dan terhubung satu sama lain, maka salin konfigurasi yang ada dan beri penjelasan singkat dari konfigurasi yang telah anda lakukan !
 
 - Konfigurasi Router0
+  
 - Konfigurasi Switch0
+
 - Konfigurasi Switch1
-- 
