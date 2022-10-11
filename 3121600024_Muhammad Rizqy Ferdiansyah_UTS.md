@@ -4,7 +4,7 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 
 2-D4 IT A
 
-#UTS
+# UTS
 
 Diketahui desain sebuah jaringan 2 lantai digambarkan dalam Gambar 1.  Sedangkan konfigurasi detil terdapat pada Tabel 1. Tugas anda adalah mengkonfigurasi seluruh perangkat sehingga seluruh PC yang ada dapat saling terhubung. Buatlah simualsinya dengan menggunakan packet tracer.
 
