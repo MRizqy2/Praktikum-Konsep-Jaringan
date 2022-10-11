@@ -4,7 +4,7 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 
 2-D4 IT A
 
-# 
+Diketahui desain sebuah jaringan 2 lantai digambarkan dalam Gambar 1.  Sedangkan konfigurasi detil terdapat pada Tabel 1. Tugas anda adalah mengkonfigurasi seluruh perangkat sehingga seluruh PC yang ada dapat saling terhubung. Buatlah simualsinya dengan menggunakan packet tracer.
 
 ## Topologi
 
@@ -42,38 +42,9 @@ Konfigurasi IP yang digunakan :
 |          | fa0/3 vlan30 |                 |              |
 |          | fa0/10 trunk |                 |              |
 
-Konfigurasi pada switch 1 supaya dapat terhubung dengan switch 0 dan switch 2 yang terhbung juga deng router.
+Setelah anda berhasil mengkonfigurasi seluruh perangkat dan terhubung satu sama lain, maka salin konfigurasi yang ada dan beri penjelasan singkat dari konfigurasi yang telah anda lakukan !
 
-| Nama Divisi | Segmen IP    |
-|-------------|--------------|
-| Admin       |192.168.1.0/24|
-| Developer   |192.168.2.0/24|
-| Management  |192.168.3.0/24|
-
-![vlanconf.png](https://i.postimg.cc/wB3LDBn7/vlanconf.png)
-
-- Konfigurasi switch 0
-
-![switch0-fa10.png](https://i.postimg.cc/25XdtWnQ/switch0-fa10.png)
-
-- Konfigurasi switch 1
-
-![switch1-fa10.png](https://i.postimg.cc/jSDSXJd0/switch1-fa10.png)
-
-![switch1-fa11.png](https://i.postimg.cc/Tw62f7jf/switch1-fa11.png)
-
-![switch1-fa12.png](https://i.postimg.cc/RFSrgjQ6/switch1-fa12.png)
-
-- Konfigurasi switch 2
-
-![switch2-fa10.png](https://i.postimg.cc/pdkcLyzr/switch2-fa10.png)
-
-- Konfigurasi pada router
-
-![gig0.png](https://i.postimg.cc/wM1XHjcC/gig0.png)
-
-- Testing ping PC-10.4 ke PC-10.2
-
-![test-ping.png](https://i.postimg.cc/05LvsH93/test-ping.png)
-
-Pada testing diatas PC-10.4 ke PC-10.2 sukses dilakukan karena PC-10.4 memiliki vlan yang sama dengan PC-10.2 yaitu vlan 10.
+- Konfigurasi Router0
+- Konfigurasi Switch0
+- Konfigurasi Switch1
+- 
