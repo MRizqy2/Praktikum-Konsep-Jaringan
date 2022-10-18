@@ -4,23 +4,24 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 
 2-D4 IT A
 
-## Topologi
+# Topologi
 
-Berikut merupakan topologi yang akan saya gunakan.
+Topologi yang saya Buat.
 
-![Topologi](assets/topologi.png)
+![Topologi.png](https://i.postimg.cc/g2XfKMhK/Topologi.png)
 
-Pada topologi diatas, terdapat jaringan di sebelah kiri yang memiliki ip network 192.168.4.0/24, untuk yang sebelah kanan memiliki network 192.168.5.0/24. Akan disiapkan 3 router untuk menghubungkan kedua jaringan tersebut. Dari sini saya akan melakukan 4 percobaan antara lain :
+Pada topologi diatas, di sebelah kiri terdapat jaringan yang memiliki ip network 192.168.4.0/24, lalu di sebelah kanan memiliki network 192.168.5.0/24. Disiapkan 3 router untuk menghubungkan kedua jaringan tersebut. 
+Kita melakukan 4 percobaan antara lain :
 
-## Percobaan 1: Konfigurasi default
+## Percobaan 1 (Konfigurasi default)
 
-1.  konfigurasi ip dan default gateway pada pc0 dan pc1.
+1.  Konfigurasi ip dan default gateway pada pc0 dan pc1.
 
     ![PC0.png](https://i.postimg.cc/FsmBtW3p/PC0.png)]
 
     ![PC1.png](https://i.postimg.cc/VkhgNDr3/PC1.png)
 
-2.  Beri konfigurasi ip dan hostname pada router1 dan router2, berikut konfigurasinya
+2.  Beri konfigurasi ip dan hostname pada router1 dan router2.
 
     Router1
 
@@ -70,19 +71,19 @@ Pada topologi diatas, terdapat jaringan di sebelah kiri yang memiliki ip network
 
     Sedangkan Router1 memiliki rute menuju jaringan 5.0 melalui gateway 192.168.3.2 dnegan distance default [1/0] atau 1.
 
-## Percobaan 2: Trace Packet
+## Percobaan 2 (Trace Packet)
 
 Sesudah melakukan konfigurasi static router, kita dapat melakukan trace packet dari jaringan 4.0 menuju 5.0 dengan memberikan perintah :
 
         tracert 192.168.5.2
 
-pada cmp PC0
+Pada cmp PC0
 
 ![tracert.png](https://i.postimg.cc/kgP1NjXK/tracert.png)
 
 Dari hasil percobaan diatas, packet akan melewati 2 gateway sebelum sampai tujuan, gateway tersebut adalah gateway dari jaringan itu sendiri dan (192.168.4.1) dan ip dari router1 yang terhubung dengan router2 (192.168.3.2). dapat disimpulkan bahwa paket sudah memalui rute yang benar.
 
-## Percobaan 3: Konfigurasi IP dan routing Router0
+## Percobaan 3 (Konfigurasi IP dan routing Router0)
 
 Kita mengkonfigurasi routing0 supaya memiliki routing menuju jaringan 4.0 dan 5.0 dengan memberikan perintah seperti berikut :
 
@@ -104,9 +105,9 @@ Dari tabel diatas, menunjukkan bahwa konfigurasi pada router0 sudah benar. Mari 
 
 ![tracert-2.png](https://i.postimg.cc/wj3XmLDL/tracert-2.png)
 
-Dasil trace menunjukkan bahwa route yang diambil sama seperti yang sebelumnya, sehingga untuk dapat melewati router0 kita dapat melakukan perubahan matrix yang akan kita lakukan pada percobaan berikutnya.
+Hasil trace menunjukkan bahwa route yang diambil sama seperti yang sebelumnya, sehingga untuk dapat melewati router0 kita dapat melakukan perubahan matrix yang akan kita lakukan pada percobaan berikutnya.
 
-## Percobaan 4 - Penambahan routing melalui router0
+## Percobaan 4 (Penambahan routing melalui router0)
 
 Kita coba menambahkan route untuk pengiriman packet dari PC0 menuju PC1 melalui router0, sedangkan dari PC1 menuju PC0 tidak melalui router0.
 
@@ -136,13 +137,13 @@ Kita coba menambahkan route untuk pengiriman packet dari PC0 menuju PC1 melalui 
 
     Router1
 
-    ![new table router1](assets/new%20routing%20Tabel1.png)
+    ![routing-BTabel1.png](https://i.postimg.cc/qB32cyDd/routing-BTabel1.png)
 
     Sekarang Router1 memiliki rute menuju jaringan 4.0 melalui gateway 192.168.3.1 dengan distance baru yaitu [9/0] atau 9.
 
     Router2
 
-    ![new table router1](assets/new%20routing%20Tabel2.png)
+    ![routing-BTabel2.png](https://i.postimg.cc/9fkqZQGM/routing-BTabel2.png)
 
     Sekarang Router1 memiliki rute baru yang memiliki gateway 192.168.2.2 dan memiliki distance yang baru.
 
