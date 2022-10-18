@@ -6,7 +6,7 @@ Muhammad Rizqy Ferdiansyah (3121600024)
 
 # Topologi
 
-Topologi yang saya Buat.
+Topologi yang saya Buat:
 
 ![Topologi.png](https://i.postimg.cc/g2XfKMhK/Topologi.png)
 
