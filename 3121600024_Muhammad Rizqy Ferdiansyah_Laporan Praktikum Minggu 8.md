@@ -78,7 +78,7 @@ sesudah melakukan konfigurasi static router, kita dapat melakukan trace packet d
 
 pada cmp PC0
 
-![trace paket1](assets/tracert.png)
+![tracert.png](https://i.postimg.cc/kgP1NjXK/tracert.png)
 
 Dari hasil percobaan diatas, packet akan melewati 2 gateway sebelum sampai tujuan, gateway tersebut adalah gateway dari jaringan itu sendiri dan (192.168.4.1) dan ip dari router1 yang terhubung dengan router2 (192.168.3.2). dapat disimpulkan bahwa paket sudah memalui rute yang benar.
 
@@ -98,11 +98,11 @@ mari mengkonfigurasi routing0 supaya memiliki routing menuju jaringan 4.0 dan 5.
 
 meri cek tabel routing yang sudah kita buat pad router0
 
-![tabel Router0](assets/routing%20Tabel0.png)
+![routing-Tabel0.png](https://i.postimg.cc/pdT6ymL6/routing-Tabel0.png)
 
 dari tabel diatas, menunjukkan bahwa konfigurasi pada router0 sudah benar. Mari kita coba untuk melakukan trace paket.
 
-![trace paket2](assets/tracert%202.png)
+![tracert-2.png](https://i.postimg.cc/wj3XmLDL/tracert-2.png)
 
 hasil trace menunjukkan bahwa route yang diambil sama seperti yang sebelumnya, sehingga untuk dapat melewati router0 kita dapat melakukan perubahan matrix yang akan kita lakukan pada percobaan berikutnya.
 
@@ -150,10 +150,10 @@ mari kita coba menambahkan route untuk pengiriman packet dari PC0 menuju PC1 mel
 
 mari kita lekukan pembuktian konfigurasi yang telah kita buat dengan melakukan trac pada PC0 menuju PC1
 
-![tracert r0](assets/tracert%20r0.png)
+![tracert-r0.png](https://i.postimg.cc/7YJPJLfb/tracert-r0.png)
 
 dari gambar diatas, jalur yang dilewati oleh packet telah berubah. gateway yang dilewati bertambah yaitu 192.168.2.2 dan 192.168.3.2.
 
-![tracert r0 2](assets/tracert%20r0%202.png)
+![tracert-r0-2.png](https://i.postimg.cc/htrGc5X0/tracert-r0-2.png)
 
 dari gambar diatas, jalur yang dilewati masih sama seperti percobaan sebelumnya, ini sesuai dengan distance yang telah kita berikan.
