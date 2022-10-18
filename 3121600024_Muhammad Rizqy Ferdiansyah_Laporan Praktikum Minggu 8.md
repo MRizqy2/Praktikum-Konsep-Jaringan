@@ -48,7 +48,7 @@ Pada topologi diatas, terdapat jaringan di sebelah kiri yang memiliki ip network
             ip address 192.168.4.1 255.255.255.0
             no shutdown
 
-3.  beri juga konfigurasi static dan pada router1 dan router2, karena router tehubung secara langsung sehingga kita dapat langsung mengarahkan ip ke masing masing router. Berikut konfigurasinya
+3.  Lalu beri juga konfigurasi static dan pada router1 dan router2, karena router tehubung secara langsung sehingga kita dapat langsung mengarahkan ip ke masing masing router. Berikut konfigurasinya
 
     Router1
 
@@ -58,7 +58,7 @@ Pada topologi diatas, terdapat jaringan di sebelah kiri yang memiliki ip network
 
         ip route 192.168.5.0 255.255.255.0 192.168.3.2
 
-4.  Mari kita cek tabel routing setelah melakukan konfigurasi pada kedua router tersebut dengan menggunakan perintah
+4.  Kita cek tabel routing setelah melakukan konfigurasi pada kedua router tersebut dengan menggunakan perintah
 
         show ip route
 
@@ -72,7 +72,7 @@ Pada topologi diatas, terdapat jaringan di sebelah kiri yang memiliki ip network
 
 ## Percobaan 2: Trace Packet
 
-sesudah melakukan konfigurasi static router, kita dapat melakukan trace packet dari jaringan 4.0 menuju 5.0 dengan memberikan perintah :
+Sesudah melakukan konfigurasi static router, kita dapat melakukan trace packet dari jaringan 4.0 menuju 5.0 dengan memberikan perintah :
 
         tracert 192.168.5.2
 
@@ -84,7 +84,7 @@ Dari hasil percobaan diatas, packet akan melewati 2 gateway sebelum sampai tujua
 
 ## Percobaan 3: Konfigurasi IP dan routing Router0
 
-mari mengkonfigurasi routing0 supaya memiliki routing menuju jaringan 4.0 dan 5.0 dengan memberikan perintah seperti berikut :
+Kita mengkonfigurasi routing0 supaya memiliki routing menuju jaringan 4.0 dan 5.0 dengan memberikan perintah seperti berikut :
 
     hostname Router0
     ip route 192.168.4.0 255.255.255.0 192.168.2.1
@@ -96,19 +96,19 @@ mari mengkonfigurasi routing0 supaya memiliki routing menuju jaringan 4.0 dan 5.
         ip address 192.168.2.2 255.255.255.0
         no shutdown
 
-meri cek tabel routing yang sudah kita buat pad router0
+Cek tabel routing yang sudah kita buat pad router0
 
 ![routing-Tabel0.png](https://i.postimg.cc/pdT6ymL6/routing-Tabel0.png)
 
-dari tabel diatas, menunjukkan bahwa konfigurasi pada router0 sudah benar. Mari kita coba untuk melakukan trace paket.
+Dari tabel diatas, menunjukkan bahwa konfigurasi pada router0 sudah benar. Mari kita coba untuk melakukan trace paket.
 
 ![tracert-2.png](https://i.postimg.cc/wj3XmLDL/tracert-2.png)
 
-hasil trace menunjukkan bahwa route yang diambil sama seperti yang sebelumnya, sehingga untuk dapat melewati router0 kita dapat melakukan perubahan matrix yang akan kita lakukan pada percobaan berikutnya.
+Dasil trace menunjukkan bahwa route yang diambil sama seperti yang sebelumnya, sehingga untuk dapat melewati router0 kita dapat melakukan perubahan matrix yang akan kita lakukan pada percobaan berikutnya.
 
 ## Percobaan 4 - Penambahan routing melalui router0
 
-mari kita coba menambahkan route untuk pengiriman packet dari PC0 menuju PC1 melalui router0, sedangkan dari PC1 menuju PC0 tidak melalui router0.
+Kita coba menambahkan route untuk pengiriman packet dari PC0 menuju PC1 melalui router0, sedangkan dari PC1 menuju PC0 tidak melalui router0.
 
 1.  Hapus konfigurasi routing pada Router2 dan Router1
 
@@ -120,7 +120,7 @@ mari kita coba menambahkan route untuk pengiriman packet dari PC0 menuju PC1 mel
 
          no ip route 192.168.4.0 255.255.255.0 192.168.3.1
 
-2.  lakukan konfigurasi routing baru
+2.  Lakukan konfigurasi routing baru
 
     Router2
 
@@ -148,12 +148,12 @@ mari kita coba menambahkan route untuk pengiriman packet dari PC0 menuju PC1 mel
 
 4.  Trace jalur
 
-mari kita lekukan pembuktian konfigurasi yang telah kita buat dengan melakukan trac pada PC0 menuju PC1
+Kita lekukan pembuktian konfigurasi yang telah kita buat dengan melakukan trac pada PC0 menuju PC1
 
 ![tracert-r0.png](https://i.postimg.cc/7YJPJLfb/tracert-r0.png)
 
-dari gambar diatas, jalur yang dilewati oleh packet telah berubah. gateway yang dilewati bertambah yaitu 192.168.2.2 dan 192.168.3.2.
+Dari gambar diatas, jalur yang dilewati oleh packet telah berubah. gateway yang dilewati bertambah yaitu 192.168.2.2 dan 192.168.3.2.
 
 ![tracert-r0-2.png](https://i.postimg.cc/htrGc5X0/tracert-r0-2.png)
 
-dari gambar diatas, jalur yang dilewati masih sama seperti percobaan sebelumnya, ini sesuai dengan distance yang telah kita berikan.
+Dari gambar diatas, jalur yang dilewati masih sama seperti percobaan sebelumnya, ini sesuai dengan distance yang telah kita berikan.
