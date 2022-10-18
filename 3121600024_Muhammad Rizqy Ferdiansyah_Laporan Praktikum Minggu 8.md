@@ -16,9 +16,9 @@ Pada topologi diatas, terdapat jaringan di sebelah kiri yang memiliki ip network
 
 1.  konfigurasi ip dan default gateway pada pc0 dan pc1.
 
-    ![konfigurasi PC0](assets/PC0.png)
+    ![PC0.png](https://i.postimg.cc/FsmBtW3p/PC0.png)]
 
-    ![konfigurasi PC1](assets/PC1.png)
+    ![PC1.png](https://i.postimg.cc/VkhgNDr3/PC1.png)
 
 2.  Beri konfigurasi ip dan hostname pada router1 dan router2, berikut konfigurasinya
 
@@ -62,11 +62,11 @@ Pada topologi diatas, terdapat jaringan di sebelah kiri yang memiliki ip network
 
         show ip route
 
-    ![tabel Router1](assets/routing%20Tabel1.png)
+    ![routing-Tabel1.png](https://i.postimg.cc/BvVnkPz5/routing-Tabel1.png)
 
     Router1 memiliki rute menuju jaringan 4.0 melalui gateway 192.168.3.1 dengan distance default yaitu [1/0] atau 1.
 
-    ![tabel Router2](assets/routing%20Tabel2.png)
+    ![routing-Tabel2.png](https://i.postimg.cc/CLcTcTXk/routing-Tabel2.png)
 
     Sedangkan Router1 memiliki rute menuju jaringan 5.0 melalui gateway 192.168.3.2 dnegan distance default [1/0] atau 1.
 
